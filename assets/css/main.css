@@ -181,17 +181,23 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-		p.content {
-			-moz-columns: 20em 2;
-			-webkit-columns: 20em 2;
-			-ms-columns: 20em 2;
-			columns: 20em 2;
-			-moz-column-gap: 2em;
-			-webkit-column-gap: 2em;
-			-ms-column-gap: 2em;
-			column-gap: 2em;
-			text-align: justify;
-		}
+	p.content {
+		-moz-columns: 20em 2;
+		-webkit-columns: 20em 2;
+		-ms-columns: 20em 2;
+		columns: 20em 2;
+		-moz-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		-ms-column-gap: 2em;
+		column-gap: 2em;
+		text-align: justify;
+	}
+
+	#content img {
+		width: 40%;
+		display: block;
+		margin: auto;
+	}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;
@@ -2310,6 +2316,15 @@ input, select, textarea {
 			color: #8cc9f0;
 		}
 
+		.icon.emo-style {
+			color: black;
+			cursor: pointer;
+		}
+
+		.icon.disabled {
+			color: gray;
+		}
+
 		@media screen and (max-width: 1680px) {
 
 			.icon.major:before {
@@ -2858,6 +2873,78 @@ input, select, textarea {
 					}
 
 		}
+
+		/* Navigation */
+
+		.navigation {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			width: calc(100% + 2em);
+			margin: 0 0 3em -2em;
+			padding: 0 0 10px 0;
+			list-style: none;
+		}
+	
+			.navigation li {
+				/* width: calc(33.33333% - 2em); */
+				margin-left: 2em;
+				margin-top: 3em;
+				padding: 0;
+			}
+
+			a {
+				color: #ffffff;
+				text-decoration: none;
+			}
+	
+				.navigation li:nth-child(1), .navigation li:nth-child(2), .navigation li:nth-child(3) {
+					margin-top: 0;
+				}
+	
+				.navigation li > :last-child {
+					margin-bottom: 0;
+				}
+	
+			@media screen and (max-width: 980px) {
+	
+				.navigation li {
+					width: calc(50% - 2em);
+				}
+	
+					.navigation li:nth-child(3) {
+						margin-top: 3em;
+					}
+	
+			}
+	
+			@media screen and (max-width: 736px) {
+	
+				.navigation {
+					width: 100%;
+					margin: 0 0 2em 0;
+				}
+	
+					.navigation li {
+						width: 100%;
+						margin-left: 0;
+						margin-top: 2em;
+					}
+	
+						.navigation li:nth-child(2), .navigation li:nth-child(3) {
+							margin-top: 2em;
+						}
+	
+			}
 
 /* Statistics */
 
